@@ -1,0 +1,73 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio - Ico</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">Ico</h1>
+                <button class="shows" id="navToggle">☰</button>
+                <ul class="nav-links" id="navLinks" >
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home" class="home-container">
+            <div class="text delay">
+                <h1 class="down">Welcome to my Portfolio</h1>
+                <p class="right">Learning, coding, and growing every day</p>
+                <a class="button" href="#projects">View my Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-container">
+            <div class="group">
+                <div class="text">
+                    <h1><span>Hi,</span> I'm Jorlan Ico Jr.</h1>
+                    <h2>Aspiring <span>Web Developer</span></h2>
+                    <p>Student at STI Tanay College</p>
+                </div>
+
+                <div class="img-container">
+                    <img src="/aa.avif" alt="Profile-Picture">
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('toggle');
+            navLinks.classList.toggle('active');
+        });
+
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('toggle');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navToggle.classList.remove('toggle');
+                navLinks.classList.remove('active');
+            }
+        })
+        
+    </script>
+
+    </html>
