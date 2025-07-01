@@ -176,7 +176,84 @@ nav .nav-container .nav-links a:hover {
     min-width: 250px;
     -webkit-user-drag: none;
 }
+/* .projects-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.projects-container .title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3.5em;
+}
+.projects-container .group {
+    display: grid;
+}
+.projects-container .group .item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--nav-a-color);
+}
+.projects-container .group .item img {
+    width: 100%;
+} */
 
+ /* FIXED PROJECTS SECTION */
+ .projects-container {
+    min-height: 100vh;
+    padding: 80px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container .title {
+    color: white;
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.projects-container .group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.projects-container .group .item {
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects-container .group .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.projects-container .group .item img {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.projects-container .group .item h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--nav-a-color);
+}
 .shows {
     display: none;
 }
@@ -188,15 +265,16 @@ nav .nav-container .nav-links a:hover {
     nav .nav-container .nav-links {
         position: absolute;
         top: 100%;
-        min-height: 100vh;
         left: 0;
-        width: 100%;
+        min-height: 100vh;
+        background-color: black;
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
         justify-content: center;
-        padding: 1rem 0;
-        opacity: 0;
+        align-items: center;
         visibility: hidden;
+        opacity: 0;
     }
 
     nav .nav-container .nav-links a{
@@ -262,10 +340,24 @@ nav .nav-container .nav-links a:hover {
         display: block;
         outline: none;
         border: none;
-        font-size: 40px;
+        font-size: 35px;
         background-color: transparent;
         color: white;
         cursor: pointer;
         align-items: center;
+    }
+      /* Mobile projects adjustments */
+      .projects-container {
+        padding: 80px 1rem 2rem;
+    }
+
+    .projects-container .title {
+        font-size: 2.5em;
+        margin-bottom: 2rem;
+    }
+
+    .projects-container .group {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
 }
