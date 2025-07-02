@@ -13,10 +13,12 @@
     font-family: 'Arial', sans-serif;
 }
 body {
-    scroll-behavior: smooth;
     background-color: var(--body-color);
     max-width: 1600px;
     margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
 }
 nav {
     position: fixed;
@@ -43,6 +45,8 @@ nav .nav-container {
 nav .nav-container .logo {
     font-size: 2rem;
     color: var(--h1-color);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 nav .nav-container .nav-links {
@@ -198,6 +202,7 @@ nav .nav-container .nav-links a:hover {
     max-width: 1300px;
     width: 100%;
     padding: 30px 5rem;
+    margin-bottom: 30px;
 }
 .projects-container .group .item {
     text-align: center;
@@ -319,6 +324,6 @@ nav .nav-container .nav-links a:hover {
     }
 
     .projects-container .group {
-        gap: 1.5rem;
+        gap: 2rem;
     }
 }
