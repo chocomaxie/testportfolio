@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio - Ico</title>
+        <script src="https://kit.fontawesome.com/4f6ef2ad0d.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -79,14 +80,57 @@
         </section>
 
         <section class="skills-container" id="skills">
-            <span>My Skills</span>
-            <div class="group">
-
+            <span class="title">My Skills</span>
+            <div class="wrapper">
+                <div class="item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="item">
+                    <i class="fab fa-js-square"></i>
+                    <span>Javascript</span>
+                </div>
             </div>
         </section>
+
+        <section id="contact" class="contact-container">
+            <h1 class="subt">Get in Touch</h1>
+            <form action="https://formspree.io/f/mgvyqqnd" method="post">
+                <div class="input">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="input">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div class="input">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5"></textarea>
+                </div>
+                <button class="send">Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <p> &copy; <span id="date"></span> established</p>
+        </footer>
     </body>
 
     <script>
+        const year = new Date().getFullYear();
+
+        document.getElementById('date').textContent = year;
+
+
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
 

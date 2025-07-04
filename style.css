@@ -118,7 +118,7 @@ nav .nav-container .nav-links a:hover {
 .home-container .text .button {
     color: var(--body-color);
     padding: 15px 25px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     /* to make circle using padding 1rem*/
     border-radius: 999px;
@@ -154,7 +154,7 @@ nav .nav-container .nav-links a:hover {
 }
 
 .about-container .group .text h1 {
-    font-size: 3.5em;
+    font-size: 3.5rem;
     margin-bottom: 10px;
 }
 
@@ -162,11 +162,11 @@ nav .nav-container .nav-links a:hover {
     color: red;
 }
 .about-container .group .text h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 .about-container .group .text p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 .about-container .img-container {
     display: inline-block;
@@ -193,7 +193,7 @@ nav .nav-container .nav-links a:hover {
     text-align: center;
     width: 100%;
     color: white;
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 .projects-container .group {
     display: grid;
@@ -226,7 +226,126 @@ nav .nav-container .nav-links a:hover {
     border-radius: 8px;
     width: 100%;
 }
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.skills-container .title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 80px;
+}
+.skills-container .wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+.skills-container .wrapper .item {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: white;
+}
+.item:hover {
+    transform: scale(1.1);
+}
+.skills-container .wrapper i {
+    font-size: 3rem;
+    display: inline-block;
+}
+.item span {
+    font-weight: 600;
+    margin-top: 10px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 5rem;
+    min-height: 100vh;
+}
+.contact-container .subt {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+.contact-container form {
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: white;
+    width: 500px;
+}
+.contact-container .input {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+.contact-container label {
+    font-size: 1.125rem;
+}
+.contact-container input[type=text], [type=email]{
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    font-family: 'Arial', sans-serif;
+    
+}
+.contact-container textarea {
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    resize: vertical;
+    font-family: 'Arial', sans-serif;
+    border-radius: 6px;
+}
 
+.contact-container .send {
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    height: 40px;
+    background-color: aquamarine;
+    display: inline-block;
+    font-weight: 600;
+
+}   
+
+.contact-container .send:hover {
+    background-color: aqua;
+}
+footer {
+    height: 40px;
+    color: white;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+
+}
 .shows {
     display: none;
 }
@@ -275,15 +394,15 @@ nav .nav-container .nav-links a:hover {
     }
 
     .home-container .text h1 {
-        font-size: 3.3em;
+        font-size: 3.3rem;
     }
 
     .home-container  .text p {
-        font-size: 1em;
+        font-size: 1rem;
     }
     .home-container .text .button {
         padding: 8px 13px;
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
     .about-container .group {
         padding: 0 2.5rem;
@@ -291,17 +410,17 @@ nav .nav-container .nav-links a:hover {
         text-align: center;
     }
     .about-container .group .text h1 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
     .about-container .group .text h2 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
     .about-container .group .text h1 span {
         display: flex;
         justify-content: center;
     }
     .about-container .group .text p {
-        font-size: 1em;
+        font-size: 1rem;
     }
     .about-container .img-container {
         margin-bottom: 20px;
@@ -310,20 +429,58 @@ nav .nav-container .nav-links a:hover {
         max-width: 250px;
     }
     .shows {
-        display: block;
+        display: flex;
         outline: none;
         border: none;
-        font-size: 35px;
+        font-size: 1.5625rem;
         background-color: transparent;
         color: white;
         cursor: pointer;
         align-items: center;
     }
     .projects-container .title {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 
     .projects-container .group {
         gap: 2rem;
+    }
+    .skills-container .title{
+        font-size: 2.5rem;
+    }
+    .skills-container .wrapper .item{
+        height: 150px;
+        width: 150px;
+        font-size: 0.825rem;
+    }
+    .contact-container form {
+        width: 400px;
+    }
+    .contact-container .input {
+    padding-bottom: 10px;
+
+    }
+    .contact-container .subt {
+        font-size: 2.5rem;
+    }
+    .contact-container label {
+        font-size: 0.999rem;
+    }
+    .contact-container input[type=text], [type=email]{
+        padding: 5px 10px;
+        font-size: 1.1rem;
+    }
+    .contact-container textarea {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+    }
+    
+    .contact-container .send {
+        font-size: 1rem;
+        height: 30px;
+    }   
+    footer {
+        height: 30px;
+        font-size: 0.9375rem;
     }
 }
